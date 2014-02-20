@@ -1,32 +1,23 @@
+<!-- defines base layout -->
+
 <!DOCTYPE html>
 <html>
   <head>
+	<!-- full_title method defined in application_helper.rb, :title passed through on actual page -->
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+	<!--inserts the if statement for IE < v.9 using the partial found _shim.erb.html -->
+	<%= render 'layouts/shim' %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to "Pynched", '#', id: "logo" %>
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Home",    '#' %></li>
-              <li><%= link_to "Help",    '#' %></li>
-              <li><%= link_to "Sign in", '#' %></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+	<!-- inserts the header portion using the partial found _header.erb.html -->
+	<%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
+	  <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
