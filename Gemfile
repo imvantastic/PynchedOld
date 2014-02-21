@@ -3,12 +3,12 @@ ruby '1.9.3'
 
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
-gem 'font-awesome-sass-rails'
+#gem 'font-awesome-sass-rails'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
-gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
+#gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
