@@ -2,7 +2,7 @@
 
 /* mixins, variables, etc. */
 
-$grayMediumLight: #eaeaea;
+$grayMedium: #eaeaea;
 
 /* universal */
 
@@ -80,7 +80,7 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
+  border-top: 1px solid $grayMedium;
   color: $grayLight;
   a {
     color: $gray;
